@@ -54,6 +54,14 @@ header.bind = function() {
 	header.dom('#button_back_home')   .on(eventName, function() { lychee.goto() })
 	header.dom('#button_back')        .on(eventName, function() { lychee.goto(album.getID()) })
 
+	header.dom('#button_randomize_album').on(eventName, function() {
+		$('.contentZoomIn').each(function () {
+			var $d = $(this).find('.photo').remove();
+        		shuffle($d);
+			$d.appendTo(this);
+		});
+	})
+
 	header.dom('.header__search').on('keyup click', function() { search.find($(this).val()) })
 	header.dom('.header__clear').on(eventName, function() {
 		header.dom('.header__search').focus()
@@ -62,6 +70,14 @@ header.bind = function() {
 
 	return true
 
+}
+
+
+function shuffle (array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const rand = Math.floor(Math.random() * (i + 1));
+        [array[i], array[rand]] = [array[rand], array[i]]
+    }
 }
 
 header.show = function() {
