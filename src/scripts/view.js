@@ -158,7 +158,6 @@ view.album = {
 
 			// Add photos to view
 			lychee.content.html(photosData)
-
 		},
 
 		title: function(photoID) {
@@ -202,6 +201,7 @@ view.album = {
 				if (!visible.albums()) {
 					album.json.num--
 					view.album.num()
+					header.setSummary(album.json.num + " items")
 				}
 			})
 

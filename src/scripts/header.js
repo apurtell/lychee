@@ -115,6 +115,15 @@ header.setTitle = function(title = 'Untitled') {
 
 }
 
+header.setSummary = function(html) {
+
+	let $summary = header.dom('.header__summary')
+
+	$summary.html(html)
+
+	return true
+}
+
 header.setMode = function(mode) {
 
 	if (mode==='albums' && lychee.publicMode===true) mode = 'public'

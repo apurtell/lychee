@@ -35,6 +35,15 @@
 		&--visible { display: flex; }
 	}
 
+	// Summary------------------------------------------------------------- //
+	&__summary {
+		color: #fff;
+		font-size: 14px;
+		text-align: left;
+		cursor: default;
+		white-space: nowrap;
+	}
+
 	// Title -------------------------------------------------------------- //
 	&__title {
 		width: 100%;

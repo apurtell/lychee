@@ -83,6 +83,7 @@ album.load = function(albumID, refresh = false) {
 				if (refresh===false) {
 					lychee.animate(lychee.content, 'contentZoomIn')
 					header.setMode('album')
+					header.setSummary(album.json.num + " items")
 				}
 
 			}, waitTime)
