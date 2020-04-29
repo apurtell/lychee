@@ -58,6 +58,9 @@ $(document).ready(function() {
 			if (visible.album() && basicModal.visible()===false)       { multiselect.selectAll(); return false }
 			else if (visible.albums() && basicModal.visible()===false) { multiselect.selectAll(); return false }
 		})
+		.bind([ 'del', 'ctrl+d' ], function() {
+			if (visible.photo()) { $('#button_trash').click(); return false }
+		})
 
 	Mousetrap.bindGlobal('enter', function() {
 		if (basicModal.visible()===true) basicModal.action()
