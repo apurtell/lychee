@@ -36,7 +36,7 @@ view.albums = {
 				albums.parse(albums.json.smartalbums.starred)
 				albums.parse(albums.json.smartalbums.recent)
 
-				smartData = build.divider('Smart Albums') + build.album(albums.json.smartalbums.unsorted) + build.album(albums.json.smartalbums.public) + build.album(albums.json.smartalbums.starred) + build.album(albums.json.smartalbums.recent)
+				smartData = build.divider('Smart Albums (4)') + build.album(albums.json.smartalbums.unsorted) + build.album(albums.json.smartalbums.public) + build.album(albums.json.smartalbums.starred) + build.album(albums.json.smartalbums.recent)
 
 			}
 
@@ -49,7 +49,7 @@ view.albums = {
 				})
 
 				// Add divider
-				if (lychee.publicMode===false) albumsData = build.divider('Albums') + albumsData
+				if (lychee.publicMode===false) albumsData = build.divider('Albums (' + albums.json.num + ')') + albumsData
 
 			}
 
