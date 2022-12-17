@@ -138,7 +138,12 @@ view.album = {
 
 		init: function() {
 
-			let photosData = ''
+			let photosData = '';
+
+            // Add description at the top of the album page
+            if (album.json.description) {
+                photosData += '<div class="divider"><h1>' + album.json.description + '</h1></div>'
+            }
 
 			if (album.json.content && album.json.content!==false) {
 
